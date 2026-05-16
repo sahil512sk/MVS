@@ -1,3 +1,16 @@
 <?php
-echo "<h1>Hello from Railway!</h1>";
-echo "<p>PHP version: " . phpversion() . "</p>";
+
+$host = "localhost";
+$user = "root";
+$password = "";
+$database = "MVS";
+
+$conn = mysqli_connect($host, $user, $password, $database);
+
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+echo "Database connected successfully!";
+
+?>
